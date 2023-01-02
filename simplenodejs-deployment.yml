@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simplenodejs-deployment
+  labels:
+    app: simplenodejs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simplenodejs
+  template:
+    metadata:
+      labels:
+        app: simplenodejs
+    spec:
+      containers:
+        - name: simplenodejs
+          image: khmarbaise/simplenodejs:latest
+          ports:
+            - containerPort: 8080
