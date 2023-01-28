@@ -5,6 +5,9 @@ on:
     branches:
       - '*'
 
+env:
+  DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
